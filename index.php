@@ -25,13 +25,14 @@ PS. dovete cercare nella documentazione del metodo str_replace -->
   <form action="./server.php" >
 
     <p>
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name" placeholder="Insert your name">
+      <label for="thoughts">Your thoughts</label>
+      <!-- <input type="text" name="thoughts" id="thoughts" placeholder="Insert your thoughts"> -->
+      <textarea name="thoughts" id="thoughts" placeholder="Write your thoughts here"></textarea>
     </p>
 
     <p>
       <label for="bad_word">Bad Word</label>
-      <input type="text" name="bad_word" id="bad_word" placeholder="Insert a Bad Word">
+      <input type="text" name="bad_word" id="bad_word" placeholder="Write your Bad Word">
     </p>
       
     <p>

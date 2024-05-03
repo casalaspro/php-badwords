@@ -1,15 +1,26 @@
 <?php
 
-$name = $_GET["name"];
+$thoughts = $_GET["thoughts"];
 $bad_word = $_GET["bad_word"];
+$howManyBadWords;
+$thoughtsCensored = str_replace($bad_word, "***", $thoughts, $howManyBadWords);
 
-// var_dump($name, $bad_word);
+// print_r($thoughtsCensored);
+// print_r($howManyBadWords);echo 
+
+
+
+// var_dump($thoughts, $bad_word);
 
 function myStringLength($string){
   return strlen($string);
 };
 
-// echo myStringLength($name);
+function changeBadWord($thoughts, $bad_word){
+
+};
+
+// echo myStringLength($thoughts);
 // echo myStringLength($bad_word);
 ?>
 
@@ -27,11 +38,17 @@ function myStringLength($string){
 </head>
 <body>
 
-  <p>Il tuo nome è <span><?php echo $name; ?></span></p>
-  <p>ed è lungo <span><?php echo myStringLength($name); ?></span> caratteri.</p>
+  <p>Il tuo pensiero è <span><?php echo $thoughts; ?></span></p>
+  <p>ed è lungo <span><?php echo myStringLength($thoughts); ?></span> caratteri.</p>
 
   <p>La tua bad-word è: <span><?php echo $bad_word; ?></span></p>
   <p>ed è lunga <span><?php echo myStringLength($bad_word); ?></span> caratteri.</p>
+
+  <h2>Il tuo pensiero censurato: </h2>
+  <p><?php echo $thoughtsCensored ?></p>
+
+  <h3>N° di censure:</h3>
+  <p><?php echo $howManyBadWords ?></p>
 
   
 

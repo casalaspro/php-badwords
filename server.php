@@ -1,27 +1,25 @@
 <?php
 
-$thoughts = $_GET["thoughts"];
-$bad_word = $_GET["bad_word"];
+// variables from GET method
+$thoughts = $_GET["thoughts"]; //paragraph
+$bad_word = $_GET["bad_word"]; //bad-word
+
+// void variables created to receive number of changes inside the paragraph
 $howManyBadWords;
+
+// variable that receives the paragraph censored
 $thoughtsCensored = str_replace($bad_word, "***", $thoughts, $howManyBadWords);
 
+//  ways to debug
 // print_r($thoughtsCensored);
 // print_r($howManyBadWords);echo 
-
-
-
 // var_dump($thoughts, $bad_word);
 
+// non needed function that counts the number of chars
 function myStringLength($string){
   return strlen($string);
 };
 
-function changeBadWord($thoughts, $bad_word){
-
-};
-
-// echo myStringLength($thoughts);
-// echo myStringLength($bad_word);
 ?>
 
 <!DOCTYPE html>
@@ -50,10 +48,6 @@ function changeBadWord($thoughts, $bad_word){
   <h3>N° di censure:</h3>
   <p><?php echo $howManyBadWords ?></p>
 
-  
-
-
-  
 </body>
 </html>
 

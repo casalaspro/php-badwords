@@ -21,7 +21,15 @@ PS. dovete cercare nella documentazione del metodo str_replace -->
 </head>
 <body>
 
-  <form action="" >
+  <form action="./server.php" >
+    
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" placeholder="Insert your name">
+
+    <label for="bad_word">Bad Word</label>
+    <input type="text" name="bad_word" id="bad_word">
+
+    <button>Send</button>
 
   </form>
   
